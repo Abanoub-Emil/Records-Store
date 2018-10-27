@@ -7,21 +7,93 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9DD7E96503DFBE71E0B2111 /* Pods_RecordStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02EC9F9A5B45FEBDA5B1A16D /* Pods_RecordStore.framework */; };
+		EF3ADB25218368520037F31F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3ADB24218368520037F31F /* Utils.swift */; };
 		EF8217242180B06600A685D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8217232180B06600A685D9 /* AppDelegate.swift */; };
-		EF8217262180B06600A685D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8217252180B06600A685D9 /* ViewController.swift */; };
-		EF8217292180B06600A685D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8217272180B06600A685D9 /* Main.storyboard */; };
 		EF82172B2180B06800A685D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF82172A2180B06800A685D9 /* Assets.xcassets */; };
-		EF82172E2180B06800A685D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF82172C2180B06800A685D9 /* LaunchScreen.storyboard */; };
+		EF8217432180B2EA00A685D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF82173D2180B2E900A685D9 /* Main.storyboard */; };
+		EF8217442180B2EA00A685D9 /* DetailsStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF82173E2180B2E900A685D9 /* DetailsStoryBoard.storyboard */; };
+		EF8217452180B2EA00A685D9 /* RecordsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF82173F2180B2EA00A685D9 /* RecordsTableViewCell.xib */; };
+		EF8217462180B2EA00A685D9 /* DetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF8217402180B2EA00A685D9 /* DetailsTableViewCell.xib */; };
+		EF8217472180B2EA00A685D9 /* FavoriteStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8217412180B2EA00A685D9 /* FavoriteStoryBoard.storyboard */; };
+		EF8217482180B2EA00A685D9 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF8217422180B2EA00A685D9 /* FavoriteTableViewCell.xib */; };
+		EF82174C2180B2F500A685D9 /* RecordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8217492180B2F500A685D9 /* RecordsTableViewCell.swift */; };
+		EF82174D2180B2F500A685D9 /* DetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF82174A2180B2F500A685D9 /* DetailsTableViewCell.swift */; };
+		EF82174E2180B2F500A685D9 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF82174B2180B2F500A685D9 /* FavoriteTableViewCell.swift */; };
+		EF8217632180B30700A685D9 /* Futura Book Italic font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF82174F2180B30600A685D9 /* Futura Book Italic font.ttf */; };
+		EF8217642180B30700A685D9 /* futura medium bt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF8217502180B30600A685D9 /* futura medium bt.ttf */; };
+		EF8217652180B30700A685D9 /* Futura Medium Italic font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF8217512180B30600A685D9 /* Futura Medium Italic font.ttf */; };
+		EF8217662180B30700A685D9 /* Futura Heavy Italic font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF8217522180B30600A685D9 /* Futura Heavy Italic font.ttf */; };
+		EF8217672180B30700A685D9 /* unicode.futurab.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF8217532180B30600A685D9 /* unicode.futurab.ttf */; };
+		EF8217682180B30700A685D9 /* futura light bt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF8217542180B30600A685D9 /* futura light bt.ttf */; };
+		EF8217692180B30700A685D9 /* Futura Book font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF8217552180B30600A685D9 /* Futura Book font.ttf */; };
+		EF82176A2180B30700A685D9 /* Futura Heavy font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF8217562180B30600A685D9 /* Futura Heavy font.ttf */; };
+		EF82176B2180B30700A685D9 /* Futura-CondensedLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF8217572180B30600A685D9 /* Futura-CondensedLight.otf */; };
+		EF82176C2180B30700A685D9 /* Futura Extra Black font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF8217582180B30600A685D9 /* Futura Extra Black font.ttf */; };
+		EF82176D2180B30700A685D9 /* tt0205m_.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF8217592180B30700A685D9 /* tt0205m_.ttf */; };
+		EF82176E2180B30700A685D9 /* futura medium condensed bt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF82175A2180B30700A685D9 /* futura medium condensed bt.ttf */; };
+		EF82176F2180B30700A685D9 /* unicode.futurabb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF82175B2180B30700A685D9 /* unicode.futurabb.ttf */; };
+		EF8217702180B30700A685D9 /* Futura XBlk BT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF82175C2180B30700A685D9 /* Futura XBlk BT.ttf */; };
+		EF8217712180B30700A685D9 /* Futura Light font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF82175D2180B30700A685D9 /* Futura Light font.ttf */; };
+		EF8217722180B30700A685D9 /* futur.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF82175E2180B30700A685D9 /* futur.ttf */; };
+		EF8217732180B30700A685D9 /* Futura Light Italic font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF82175F2180B30700A685D9 /* Futura Light Italic font.ttf */; };
+		EF8217742180B30700A685D9 /* Futura Bold font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF8217602180B30700A685D9 /* Futura Bold font.ttf */; };
+		EF8217752180B30700A685D9 /* sharefonts.net.txt in Resources */ = {isa = PBXBuildFile; fileRef = EF8217612180B30700A685D9 /* sharefonts.net.txt */; };
+		EF8217762180B30700A685D9 /* Futura Bold Italic font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF8217622180B30700A685D9 /* Futura Bold Italic font.ttf */; };
+		EF82177B2180B31700A685D9 /* DetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8217772180B31700A685D9 /* DetailsTableViewController.swift */; };
+		EF82177C2180B31700A685D9 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8217782180B31700A685D9 /* FavoritesViewController.swift */; };
+		EF82177E2180B31700A685D9 /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF82177A2180B31700A685D9 /* RecordsViewController.swift */; };
+		EF8217802180B32300A685D9 /* AFWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF82177F2180B32300A685D9 /* AFWrapper.swift */; };
+		EF8217822180B32A00A685D9 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8217812180B32A00A685D9 /* Record.swift */; };
+		EF8217842180B3D500A685D9 /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8217832180B3D500A685D9 /* ButtonExtension.swift */; };
+		EFC92EF62180DB8800333B92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC92EF52180DB8700333B92 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02EC9F9A5B45FEBDA5B1A16D /* Pods_RecordStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecordStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6241DE79BE3276A29A821492 /* Pods-RecordStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecordStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecordStore/Pods-RecordStore.release.xcconfig"; sourceTree = "<group>"; };
+		AF84D82A0CEA99CE78829133 /* Pods-RecordStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecordStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecordStore/Pods-RecordStore.debug.xcconfig"; sourceTree = "<group>"; };
+		EF3ADB24218368520037F31F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		EF8217202180B06600A685D9 /* RecordStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecordStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8217232180B06600A685D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EF8217252180B06600A685D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EF8217282180B06600A685D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF82172A2180B06800A685D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EF82172D2180B06800A685D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF82172F2180B06800A685D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF82173D2180B2E900A685D9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EF82173E2180B2E900A685D9 /* DetailsStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailsStoryBoard.storyboard; sourceTree = "<group>"; };
+		EF82173F2180B2EA00A685D9 /* RecordsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordsTableViewCell.xib; sourceTree = "<group>"; };
+		EF8217402180B2EA00A685D9 /* DetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsTableViewCell.xib; sourceTree = "<group>"; };
+		EF8217412180B2EA00A685D9 /* FavoriteStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FavoriteStoryBoard.storyboard; sourceTree = "<group>"; };
+		EF8217422180B2EA00A685D9 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
+		EF8217492180B2F500A685D9 /* RecordsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsTableViewCell.swift; sourceTree = "<group>"; };
+		EF82174A2180B2F500A685D9 /* DetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableViewCell.swift; sourceTree = "<group>"; };
+		EF82174B2180B2F500A685D9 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		EF82174F2180B30600A685D9 /* Futura Book Italic font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Book Italic font.ttf"; sourceTree = "<group>"; };
+		EF8217502180B30600A685D9 /* futura medium bt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "futura medium bt.ttf"; sourceTree = "<group>"; };
+		EF8217512180B30600A685D9 /* Futura Medium Italic font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Medium Italic font.ttf"; sourceTree = "<group>"; };
+		EF8217522180B30600A685D9 /* Futura Heavy Italic font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Heavy Italic font.ttf"; sourceTree = "<group>"; };
+		EF8217532180B30600A685D9 /* unicode.futurab.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = unicode.futurab.ttf; sourceTree = "<group>"; };
+		EF8217542180B30600A685D9 /* futura light bt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "futura light bt.ttf"; sourceTree = "<group>"; };
+		EF8217552180B30600A685D9 /* Futura Book font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Book font.ttf"; sourceTree = "<group>"; };
+		EF8217562180B30600A685D9 /* Futura Heavy font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Heavy font.ttf"; sourceTree = "<group>"; };
+		EF8217572180B30600A685D9 /* Futura-CondensedLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura-CondensedLight.otf"; sourceTree = "<group>"; };
+		EF8217582180B30600A685D9 /* Futura Extra Black font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Extra Black font.ttf"; sourceTree = "<group>"; };
+		EF8217592180B30700A685D9 /* tt0205m_.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tt0205m_.ttf; sourceTree = "<group>"; };
+		EF82175A2180B30700A685D9 /* futura medium condensed bt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "futura medium condensed bt.ttf"; sourceTree = "<group>"; };
+		EF82175B2180B30700A685D9 /* unicode.futurabb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = unicode.futurabb.ttf; sourceTree = "<group>"; };
+		EF82175C2180B30700A685D9 /* Futura XBlk BT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura XBlk BT.ttf"; sourceTree = "<group>"; };
+		EF82175D2180B30700A685D9 /* Futura Light font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Light font.ttf"; sourceTree = "<group>"; };
+		EF82175E2180B30700A685D9 /* futur.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = futur.ttf; sourceTree = "<group>"; };
+		EF82175F2180B30700A685D9 /* Futura Light Italic font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Light Italic font.ttf"; sourceTree = "<group>"; };
+		EF8217602180B30700A685D9 /* Futura Bold font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Bold font.ttf"; sourceTree = "<group>"; };
+		EF8217612180B30700A685D9 /* sharefonts.net.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sharefonts.net.txt; sourceTree = "<group>"; };
+		EF8217622180B30700A685D9 /* Futura Bold Italic font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Bold Italic font.ttf"; sourceTree = "<group>"; };
+		EF8217772180B31700A685D9 /* DetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableViewController.swift; sourceTree = "<group>"; };
+		EF8217782180B31700A685D9 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		EF82177A2180B31700A685D9 /* RecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
+		EF82177F2180B32300A685D9 /* AFWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFWrapper.swift; sourceTree = "<group>"; };
+		EF8217812180B32A00A685D9 /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		EF8217832180B3D500A685D9 /* ButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
+		EFC92EF52180DB8700333B92 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +101,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9DD7E96503DFBE71E0B2111 /* Pods_RecordStore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F280C0B5281CFA27F7B2DE7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF84D82A0CEA99CE78829133 /* Pods-RecordStore.debug.xcconfig */,
+				6241DE79BE3276A29A821492 /* Pods-RecordStore.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B575C9EE73263A783D51BC6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02EC9F9A5B45FEBDA5B1A16D /* Pods_RecordStore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF3ADB22218368390037F31F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EF3ADB24218368520037F31F /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		EF8217172180B06600A685D9 = {
 			isa = PBXGroup;
 			children = (
 				EF8217222180B06600A685D9 /* RecordStore */,
 				EF8217212180B06600A685D9 /* Products */,
+				7F280C0B5281CFA27F7B2DE7 /* Pods */,
+				B575C9EE73263A783D51BC6D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +154,120 @@
 		EF8217222180B06600A685D9 /* RecordStore */ = {
 			isa = PBXGroup;
 			children = (
-				EF8217232180B06600A685D9 /* AppDelegate.swift */,
-				EF8217252180B06600A685D9 /* ViewController.swift */,
-				EF8217272180B06600A685D9 /* Main.storyboard */,
-				EF82172A2180B06800A685D9 /* Assets.xcassets */,
-				EF82172C2180B06800A685D9 /* LaunchScreen.storyboard */,
+				EF3ADB22218368390037F31F /* Utils */,
+				EF82173C2180B21300A685D9 /* Supporting Files */,
+				EF82173B2180B20E00A685D9 /* Model */,
+				EF82173A2180B20600A685D9 /* AFWrapper */,
+				EF8217392180B1F800A685D9 /* ViewController */,
+				EF8217382180B1F100A685D9 /* View */,
+				EF8217372180B1E800A685D9 /* TableCell */,
+				EFDB25792181CB43001FE4F9 /* Cell View */,
+				EF8217362180B1D700A685D9 /* Fonts */,
+				EF8217352180B1CF00A685D9 /* Extensions */,
 				EF82172F2180B06800A685D9 /* Info.plist */,
 			);
 			path = RecordStore;
+			sourceTree = "<group>";
+		};
+		EF8217352180B1CF00A685D9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EF8217832180B3D500A685D9 /* ButtonExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EF8217362180B1D700A685D9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EF82175E2180B30700A685D9 /* futur.ttf */,
+				EF8217602180B30700A685D9 /* Futura Bold font.ttf */,
+				EF8217622180B30700A685D9 /* Futura Bold Italic font.ttf */,
+				EF8217552180B30600A685D9 /* Futura Book font.ttf */,
+				EF82174F2180B30600A685D9 /* Futura Book Italic font.ttf */,
+				EF8217582180B30600A685D9 /* Futura Extra Black font.ttf */,
+				EF8217562180B30600A685D9 /* Futura Heavy font.ttf */,
+				EF8217522180B30600A685D9 /* Futura Heavy Italic font.ttf */,
+				EF8217542180B30600A685D9 /* futura light bt.ttf */,
+				EF82175D2180B30700A685D9 /* Futura Light font.ttf */,
+				EF82175F2180B30700A685D9 /* Futura Light Italic font.ttf */,
+				EF8217502180B30600A685D9 /* futura medium bt.ttf */,
+				EF82175A2180B30700A685D9 /* futura medium condensed bt.ttf */,
+				EF8217512180B30600A685D9 /* Futura Medium Italic font.ttf */,
+				EF82175C2180B30700A685D9 /* Futura XBlk BT.ttf */,
+				EF8217572180B30600A685D9 /* Futura-CondensedLight.otf */,
+				EF8217612180B30700A685D9 /* sharefonts.net.txt */,
+				EF8217592180B30700A685D9 /* tt0205m_.ttf */,
+				EF8217532180B30600A685D9 /* unicode.futurab.ttf */,
+				EF82175B2180B30700A685D9 /* unicode.futurabb.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EF8217372180B1E800A685D9 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF8217492180B2F500A685D9 /* RecordsTableViewCell.swift */,
+				EF82174B2180B2F500A685D9 /* FavoriteTableViewCell.swift */,
+				EF82174A2180B2F500A685D9 /* DetailsTableViewCell.swift */,
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
+		EF8217382180B1F100A685D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF82173D2180B2E900A685D9 /* Main.storyboard */,
+				EF8217412180B2EA00A685D9 /* FavoriteStoryBoard.storyboard */,
+				EF82173E2180B2E900A685D9 /* DetailsStoryBoard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF8217392180B1F800A685D9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EF82177A2180B31700A685D9 /* RecordsViewController.swift */,
+				EF8217782180B31700A685D9 /* FavoritesViewController.swift */,
+				EF8217772180B31700A685D9 /* DetailsTableViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EF82173A2180B20600A685D9 /* AFWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				EF82177F2180B32300A685D9 /* AFWrapper.swift */,
+			);
+			path = AFWrapper;
+			sourceTree = "<group>";
+		};
+		EF82173B2180B20E00A685D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF8217812180B32A00A685D9 /* Record.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF82173C2180B21300A685D9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF8217232180B06600A685D9 /* AppDelegate.swift */,
+				EFC92EF52180DB8700333B92 /* LaunchScreen.storyboard */,
+				EF82172A2180B06800A685D9 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EFDB25792181CB43001FE4F9 /* Cell View */ = {
+			isa = PBXGroup;
+			children = (
+				EF82173F2180B2EA00A685D9 /* RecordsTableViewCell.xib */,
+				EF8217422180B2EA00A685D9 /* FavoriteTableViewCell.xib */,
+				EF8217402180B2EA00A685D9 /* DetailsTableViewCell.xib */,
+			);
+			path = "Cell View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +277,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF8217322180B06800A685D9 /* Build configuration list for PBXNativeTarget "RecordStore" */;
 			buildPhases = (
+				74BAEA740415EAFFA39E959D /* [CP] Check Pods Manifest.lock */,
 				EF82171C2180B06600A685D9 /* Sources */,
 				EF82171D2180B06600A685D9 /* Frameworks */,
 				EF82171E2180B06600A685D9 /* Resources */,
+				36EDC3F1194B7FCF44B4B9B4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,44 +330,102 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF82172E2180B06800A685D9 /* LaunchScreen.storyboard in Resources */,
+				EF82176F2180B30700A685D9 /* unicode.futurabb.ttf in Resources */,
+				EF8217762180B30700A685D9 /* Futura Bold Italic font.ttf in Resources */,
+				EF8217652180B30700A685D9 /* Futura Medium Italic font.ttf in Resources */,
+				EF8217752180B30700A685D9 /* sharefonts.net.txt in Resources */,
+				EF8217692180B30700A685D9 /* Futura Book font.ttf in Resources */,
+				EF82176C2180B30700A685D9 /* Futura Extra Black font.ttf in Resources */,
+				EF8217462180B2EA00A685D9 /* DetailsTableViewCell.xib in Resources */,
+				EF82176A2180B30700A685D9 /* Futura Heavy font.ttf in Resources */,
+				EF8217662180B30700A685D9 /* Futura Heavy Italic font.ttf in Resources */,
+				EF82176E2180B30700A685D9 /* futura medium condensed bt.ttf in Resources */,
+				EF8217472180B2EA00A685D9 /* FavoriteStoryBoard.storyboard in Resources */,
+				EF8217442180B2EA00A685D9 /* DetailsStoryBoard.storyboard in Resources */,
+				EF8217642180B30700A685D9 /* futura medium bt.ttf in Resources */,
+				EF8217682180B30700A685D9 /* futura light bt.ttf in Resources */,
 				EF82172B2180B06800A685D9 /* Assets.xcassets in Resources */,
-				EF8217292180B06600A685D9 /* Main.storyboard in Resources */,
+				EF8217452180B2EA00A685D9 /* RecordsTableViewCell.xib in Resources */,
+				EF8217482180B2EA00A685D9 /* FavoriteTableViewCell.xib in Resources */,
+				EF8217672180B30700A685D9 /* unicode.futurab.ttf in Resources */,
+				EF8217632180B30700A685D9 /* Futura Book Italic font.ttf in Resources */,
+				EF82176D2180B30700A685D9 /* tt0205m_.ttf in Resources */,
+				EF8217702180B30700A685D9 /* Futura XBlk BT.ttf in Resources */,
+				EF8217742180B30700A685D9 /* Futura Bold font.ttf in Resources */,
+				EF8217432180B2EA00A685D9 /* Main.storyboard in Resources */,
+				EF8217732180B30700A685D9 /* Futura Light Italic font.ttf in Resources */,
+				EF8217722180B30700A685D9 /* futur.ttf in Resources */,
+				EFC92EF62180DB8800333B92 /* LaunchScreen.storyboard in Resources */,
+				EF82176B2180B30700A685D9 /* Futura-CondensedLight.otf in Resources */,
+				EF8217712180B30700A685D9 /* Futura Light font.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36EDC3F1194B7FCF44B4B9B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RecordStore/Pods-RecordStore-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RecordStore/Pods-RecordStore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74BAEA740415EAFFA39E959D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RecordStore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EF82171C2180B06600A685D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF8217262180B06600A685D9 /* ViewController.swift in Sources */,
+				EF8217842180B3D500A685D9 /* ButtonExtension.swift in Sources */,
+				EF82174D2180B2F500A685D9 /* DetailsTableViewCell.swift in Sources */,
+				EF82177B2180B31700A685D9 /* DetailsTableViewController.swift in Sources */,
+				EF82174E2180B2F500A685D9 /* FavoriteTableViewCell.swift in Sources */,
+				EF82174C2180B2F500A685D9 /* RecordsTableViewCell.swift in Sources */,
+				EF82177C2180B31700A685D9 /* FavoritesViewController.swift in Sources */,
 				EF8217242180B06600A685D9 /* AppDelegate.swift in Sources */,
+				EF3ADB25218368520037F31F /* Utils.swift in Sources */,
+				EF8217802180B32300A685D9 /* AFWrapper.swift in Sources */,
+				EF8217822180B32A00A685D9 /* Record.swift in Sources */,
+				EF82177E2180B31700A685D9 /* RecordsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		EF8217272180B06600A685D9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EF8217282180B06600A685D9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		EF82172C2180B06800A685D9 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EF82172D2180B06800A685D9 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EF8217302180B06800A685D9 /* Debug */ = {
@@ -280,6 +546,7 @@
 		};
 		EF8217332180B06800A685D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF84D82A0CEA99CE78829133 /* Pods-RecordStore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +565,7 @@
 		};
 		EF8217342180B06800A685D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6241DE79BE3276A29A821492 /* Pods-RecordStore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

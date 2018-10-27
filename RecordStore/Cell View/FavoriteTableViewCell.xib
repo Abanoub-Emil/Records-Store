@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoCell" rowHeight="156" id="KGk-i7-Jjw" customClass="FavoriteTableViewCell" customModule="RecordStore" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="353" height="156"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="353" height="155.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="record1" translatesAutoresizingMaskIntoConstraints="NO" id="BvU-KT-597">
+                        <rect key="frame" x="16" y="39" width="78" height="77.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fly Me To The Moon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0c-bc-HsE">
+                        <rect key="frame" x="110" y="39" width="171.5" height="21"/>
+                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3l-aF-gEC">
+                        <rect key="frame" x="327" y="16" width="10" height="22"/>
+                        <state key="normal" image="Delete"/>
+                        <connections>
+                            <action selector="removeFromFavorite:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9VH-QE-Gyy"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questa Noche" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hbi-bx-Lup">
+                        <rect key="frame" x="109" y="98" width="93.5" height="18.5"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$19.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDc-ED-fNp">
+                        <rect key="frame" x="254" y="96" width="57" height="23"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.20841265798825293" green="0.20841265798825293" blue="0.20841265798825293" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="BvU-KT-597" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="92y-03-Kcs"/>
+                    <constraint firstItem="t0c-bc-HsE" firstAttribute="leading" secondItem="BvU-KT-597" secondAttribute="trailing" constant="16" id="9n1-x8-XfO"/>
+                    <constraint firstItem="IDc-ED-fNp" firstAttribute="centerY" secondItem="Hbi-bx-Lup" secondAttribute="centerY" id="GOe-WY-80m"/>
+                    <constraint firstItem="BvU-KT-597" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Ms4-qn-1VR"/>
+                    <constraint firstItem="c3l-aF-gEC" firstAttribute="leading" secondItem="IDc-ED-fNp" secondAttribute="trailing" constant="16" id="PYg-5a-boA"/>
+                    <constraint firstItem="t0c-bc-HsE" firstAttribute="top" secondItem="BvU-KT-597" secondAttribute="top" id="RsF-ch-l8I"/>
+                    <constraint firstItem="c3l-aF-gEC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Ztq-Xv-dOE"/>
+                    <constraint firstItem="BvU-KT-597" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.5" id="iVY-mB-Nov"/>
+                    <constraint firstItem="Hbi-bx-Lup" firstAttribute="leading" secondItem="BvU-KT-597" secondAttribute="trailing" constant="15" id="kJr-1X-CD9"/>
+                    <constraint firstAttribute="trailing" secondItem="c3l-aF-gEC" secondAttribute="trailing" constant="16" id="u1n-WC-xzZ"/>
+                    <constraint firstItem="Hbi-bx-Lup" firstAttribute="bottom" secondItem="BvU-KT-597" secondAttribute="bottom" id="wtH-Zk-fTY"/>
+                    <constraint firstItem="BvU-KT-597" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="1:2" id="yea-GD-chw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="artist" destination="Hbi-bx-Lup" id="JiZ-TP-aXr"/>
+                <outlet property="price" destination="IDc-ED-fNp" id="PLY-Tl-5Jj"/>
+                <outlet property="recordImage" destination="BvU-KT-597" id="vZH-v2-Bmk"/>
+                <outlet property="title" destination="t0c-bc-HsE" id="oFF-43-ZxC"/>
+            </connections>
+            <point key="canvasLocation" x="162.1875" y="203.75"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Delete" width="10" height="11"/>
+        <image name="record1" width="275" height="187"/>
+    </resources>
+</document>
