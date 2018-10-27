@@ -51,16 +51,16 @@ class RecordsTableViewCell: UITableViewCell {
     
     
     func getFavoriteRecords() {
-//        let favoriteArray = defaults.array(forKey: "favoriteRecords")  as? [Int] ?? [Int]()
-//        print(favoriteArray)
-//        for id in favoriteArray {
-//            if id == cellRecord.id {
-//                print(id)
-//                favoriteButton.setImage(UIImage(named: "red"), for: .normal)
-//                return
-//            }
-//        }
-//        favoriteButton.setImage(UIImage(named: "White"), for: .normal)
+        //        let favoriteArray = defaults.array(forKey: "favoriteRecords")  as? [Int] ?? [Int]()
+        //        print(favoriteArray)
+        //        for id in favoriteArray {
+        //            if id == cellRecord.id {
+        //                print(id)
+        //                favoriteButton.setImage(UIImage(named: "red"), for: .normal)
+        //                return
+        //            }
+        //        }
+        //        favoriteButton.setImage(UIImage(named: "White"), for: .normal)
         
     }
     
