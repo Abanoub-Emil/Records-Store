@@ -41,7 +41,7 @@
                                             <constraint firstAttribute="width" constant="18" id="BAY-c0-HzK"/>
                                             <constraint firstAttribute="height" constant="18" id="yXP-iZ-NDk"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="8"/>
                                         <state key="normal" title="0">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>

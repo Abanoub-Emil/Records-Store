@@ -33,9 +33,9 @@ class DetailsTableViewController: UIViewController {
         favoriteArray = defaults.array(forKey: "favoriteRecords")  as? [Int] ?? [Int]()
         let bucketRecords = defaults.integer(forKey: "bucket")
         numberOfRecordsInBucket.setTitle(String(bucketRecords), for: .normal)
-        if (myRecord.isFavorite) {
-            isFavoriteButton.setImage(UIImage(named: "red"), for: .normal)
-        }
+//        if (myRecord.isFavorite) {
+//            isFavoriteButton.setImage(UIImage(named: "red"), for: .normal)
+//        }
     }
     
     @IBAction func goBack(_ sender: UIButton) {
