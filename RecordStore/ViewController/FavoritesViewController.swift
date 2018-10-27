@@ -14,18 +14,23 @@ class FavoritesViewController: UIViewController {
     var allRecords = [Record]()
     var favoriteRecords = [Record]()
     var favoriteArray = [Int]()
+    
+    @IBOutlet var sortingButtons: [UIButton]!
+    
+    @IBOutlet weak var isFavoriteButton: UIButton!
     @IBOutlet weak var numberOfRecordsInBucket: UIButton!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        favoriteArray = defaults.array(forKey: "favoriteRecords")  as? [Int] ?? [Int]()
-        getFavoriteRecords()
+        
         
         tableView.register(UINib(nibName: "FavoriteTableViewCell", bundle: nil), forCellReuseIdentifier: "favoCell")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        favoriteArray = defaults.array(forKey: "favoriteRecords")  as? [Int] ?? [Int]()
+        getFavoriteRecords()
         let bucketRecords = defaults.integer(forKey: "bucket")
         numberOfRecordsInBucket.setTitle(String(bucketRecords), for: .normal)
     }
@@ -37,26 +42,54 @@ class FavoritesViewController: UIViewController {
     
     
     @IBAction func sortNameDown(_ sender: UIButton) {
+        favoriteRecords = Utils.sortByNameDown(records: favoriteRecords)
+        tableView.reloadData()
+        changeButtonBackgroundColor(sender: sender)
     }
     
     
     @IBAction func sortNameUp(_ sender: UIButton) {
+        favoriteRecords = Utils.sortByNameUp(records: favoriteRecords)
+        tableView.reloadData()
+        changeButtonBackgroundColor(sender: sender)
     }
     
     @IBAction func sortPriceDown(_ sender: UIButton) {
+        favoriteRecords = Utils.sortByPriceDown(records: favoriteRecords)
+        tableView.reloadData()
+        changeButtonBackgroundColor(sender: sender)
     }
     
     @IBAction func sortPriceUp(_ sender: UIButton) {
+        favoriteRecords = Utils.sortByPriceUp(records: favoriteRecords)
+        tableView.reloadData()
+        changeButtonBackgroundColor(sender: sender)
     }
     
     @IBAction func sortDateDown(_ sender: UIButton) {
+        favoriteRecords = Utils.sortByDateDown(records: favoriteRecords)
+        tableView.reloadData()
+        changeButtonBackgroundColor(sender: sender)
     }
     
     @IBAction func sortDateUp(_ sender: UIButton) {
+        favoriteRecords = Utils.sortByDateUp(records: favoriteRecords)
+        tableView.reloadData()
+        changeButtonBackgroundColor(sender: sender)
+    }
+    
+    func changeButtonBackgroundColor(sender: UIButton){
+        for button in sortingButtons{
+            if (button == sender){
+                button.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            } else {
+                button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            }
+        }
     }
     
     func getFavoriteRecords(){
-        
+        favoriteRecords = [Record]()
         for id in favoriteArray {
             for record in allRecords {
                 if record.id == id{
@@ -65,6 +98,7 @@ class FavoritesViewController: UIViewController {
                 }
             }
         }
+        favoriteRecords = Utils.sortByPriceDown(records: favoriteRecords)
         tableView.reloadData()
     }
     

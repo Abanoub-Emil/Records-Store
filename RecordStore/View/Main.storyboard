@@ -48,7 +48,6 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvA-Xb-dDr" userLabel="nameDown">
                                         <rect key="frame" x="32" y="43" width="54" height="26"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -76,6 +75,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbS-Fw-dda" userLabel="priceDown">
                                         <rect key="frame" x="153" y="43" width="54" height="26"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -169,6 +169,10 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="iic-9E-HkC"/>
                                         </connections>
                                     </tableView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ak3-bc-Dj8">
+                                        <rect key="frame" x="188.66666666666666" y="304.66666666666669" width="37" height="37"/>
+                                        <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -200,6 +204,7 @@
                                     <constraint firstItem="U6U-dg-jd1" firstAttribute="width" secondItem="oJ5-gK-ntG" secondAttribute="width" multiplier="1:2" id="VHO-Nb-2cu"/>
                                     <constraint firstItem="U6U-dg-jd1" firstAttribute="leading" secondItem="oJ5-gK-ntG" secondAttribute="leading" id="W7M-eV-Fm2"/>
                                     <constraint firstItem="jvA-Xb-dDr" firstAttribute="width" secondItem="cPR-N6-uyI" secondAttribute="width" multiplier="1:2" id="ZbZ-zz-oRc"/>
+                                    <constraint firstItem="Ak3-bc-Dj8" firstAttribute="centerX" secondItem="HQM-Qp-dcM" secondAttribute="centerX" id="aMa-Ks-cUQ"/>
                                     <constraint firstItem="nSI-R3-1pe" firstAttribute="top" secondItem="rg6-K9-AUs" secondAttribute="top" id="aRT-da-ffh"/>
                                     <constraint firstItem="JFf-CR-6pk" firstAttribute="top" secondItem="rg6-K9-AUs" secondAttribute="bottom" constant="32" id="cGu-nj-Z1a"/>
                                     <constraint firstAttribute="trailing" secondItem="JFf-CR-6pk" secondAttribute="trailing" id="cXm-B8-Scp"/>
@@ -225,6 +230,7 @@
                                     <constraint firstItem="rg6-K9-AUs" firstAttribute="height" secondItem="RbS-Fw-dda" secondAttribute="height" id="upB-Ip-nrB"/>
                                     <constraint firstItem="hK4-XA-50D" firstAttribute="trailing" secondItem="cPR-N6-uyI" secondAttribute="trailing" id="vXE-aF-MDY"/>
                                     <constraint firstItem="f1f-ma-ktF" firstAttribute="top" secondItem="rg6-K9-AUs" secondAttribute="top" constant="8" id="vfP-Je-J6m"/>
+                                    <constraint firstItem="Ak3-bc-Dj8" firstAttribute="centerY" secondItem="HQM-Qp-dcM" secondAttribute="centerY" id="xMq-Ar-vH0"/>
                                     <constraint firstItem="7ny-ug-OXm" firstAttribute="trailing" secondItem="cPR-N6-uyI" secondAttribute="trailing" constant="-16.5" id="yMb-dv-1al"/>
                                 </constraints>
                             </view>
@@ -255,7 +261,7 @@
                                             <constraint firstAttribute="width" constant="18" id="hKZ-bp-ucD"/>
                                             <constraint firstAttribute="height" constant="18" id="vHc-aa-I1K"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
                                         <state key="normal" title="0">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -293,8 +299,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="loadingIndicator" destination="Ak3-bc-Dj8" id="nQd-9a-ag4"/>
                         <outlet property="numberOfRecordsInBucket" destination="ZfB-2s-pTS" id="mbC-JP-iBs"/>
                         <outlet property="tableView" destination="JFf-CR-6pk" id="agt-hJ-iYI"/>
+                        <outletCollection property="sortingButtons" destination="jvA-Xb-dDr" collectionClass="NSMutableArray" id="6rj-Ui-wA2"/>
+                        <outletCollection property="sortingButtons" destination="7o2-jm-Lk1" collectionClass="NSMutableArray" id="5mQ-Cu-ceZ"/>
+                        <outletCollection property="sortingButtons" destination="RbS-Fw-dda" collectionClass="NSMutableArray" id="Wty-xi-POG"/>
+                        <outletCollection property="sortingButtons" destination="nSI-R3-1pe" collectionClass="NSMutableArray" id="Vne-NA-myd"/>
+                        <outletCollection property="sortingButtons" destination="U6U-dg-jd1" collectionClass="NSMutableArray" id="olx-ON-arm"/>
+                        <outletCollection property="sortingButtons" destination="nar-F4-bA9" collectionClass="NSMutableArray" id="vtw-YA-yP7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

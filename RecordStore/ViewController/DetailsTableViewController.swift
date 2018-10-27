@@ -11,11 +11,14 @@ import SDWebImage
 
 class DetailsTableViewController: UIViewController {
     
+    
+    @IBOutlet weak var isFavoriteButton: UIButton!
+    
     @IBOutlet weak var numberOfRecordsInBucket: UIButton!
     
     let defaults = UserDefaults.standard
     var myRecord = Record()
-
+    var favoriteArray = [Int]()
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +30,38 @@ class DetailsTableViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        favoriteArray = defaults.array(forKey: "favoriteRecords")  as? [Int] ?? [Int]()
         let bucketRecords = defaults.integer(forKey: "bucket")
         numberOfRecordsInBucket.setTitle(String(bucketRecords), for: .normal)
+        if (myRecord.isFavorite) {
+            isFavoriteButton.setImage(UIImage(named: "red"), for: .normal)
+        }
     }
     
     @IBAction func goBack(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func addOrRemoveFromFavorite(_ sender: UIButton) {
+        if myRecord.isFavorite {
+            myRecord.isFavorite = false
+            isFavoriteButton.setImage(UIImage(named: "Black"), for: .normal)
+            for index in 0..<favoriteArray.count {
+                if myRecord.id == favoriteArray[index] {
+                    favoriteArray.remove(at: index)
+                    break
+                }
+            }
+            defaults.set(favoriteArray, forKey: "favoriteRecords")
+            
+        } else {
+            myRecord.isFavorite = true
+            isFavoriteButton.setImage(UIImage(named: "red"), for: .normal)
+            favoriteArray.append(myRecord.id!)
+            defaults.set(favoriteArray, forKey: "favoriteRecords")
+            
+        }
+    }
     
 }
 
@@ -46,7 +73,7 @@ extension DetailsTableViewController: UITableViewDelegate{
         return 1100
     }
     
-
+    
     
 }
 

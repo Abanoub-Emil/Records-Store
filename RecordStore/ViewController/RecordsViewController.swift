@@ -17,6 +17,10 @@ class RecordsViewController: UIViewController, RecordCellDelegate {
     var favoriteArray = [Int]()
     let recordsURL = "https://recordstor.herokuapp.com/api/recordstore/all"
     
+    @IBOutlet var sortingButtons: [UIButton]!
+    
+    
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var numberOfRecordsInBucket: UIButton!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -48,8 +52,9 @@ class RecordsViewController: UIViewController, RecordCellDelegate {
                 
                 self.allRecords.append(myRecord)
             }
-            
+            self.allRecords = Utils.sortByPriceDown(records: self.allRecords)
             self.tableView.reloadData()
+            self.loadingIndicator.isHidden = true
         }) { (Error) in
             print(Error.localizedDescription)
         }
@@ -58,6 +63,15 @@ class RecordsViewController: UIViewController, RecordCellDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         favoriteArray = defaults.array(forKey: "favoriteRecords")  as? [Int] ?? [Int]()
+        if allRecords.count > 0 {
+            for record in allRecords {
+                if favoriteArray.contains(record.id!){
+                    record.isFavorite = true
+                } else {
+                    record.isFavorite = false
+                }
+            }
+        }
         let bucketRecords = defaults.integer(forKey: "bucket")
         numberOfRecordsInBucket.setTitle(String(bucketRecords), for: .normal)
     }
@@ -72,23 +86,54 @@ class RecordsViewController: UIViewController, RecordCellDelegate {
     
     
     @IBAction func sortNameDown(_ sender: UIButton) {
+        allRecords = Utils.sortByNameDown(records: allRecords)
+        tableView.reloadData()
+        changeButtonBackgroundColor(sender: sender)
     }
     
     @IBAction func sortNameUp(_ sender: UIButton) {
+        allRecords = Utils.sortByNameUp(records: allRecords)
+        tableView.reloadData()
+        changeButtonBackgroundColor(sender: sender)
+        
     }
     
     @IBAction func sortPriceDown(_ sender: UIButton) {
+        allRecords = Utils.sortByPriceDown(records: allRecords)
+        tableView.reloadData()
+        changeButtonBackgroundColor(sender: sender)
     }
     
     @IBAction func sortPriceUp(_ sender: UIButton) {
+        allRecords = Utils.sortByPriceUp(records: allRecords)
+        tableView.reloadData()
+        changeButtonBackgroundColor(sender: sender)
     }
     
     @IBAction func sortDateDown(_ sender: UIButton) {
+        allRecords = Utils.sortByDateDown(records: allRecords)
+        tableView.reloadData()
+        changeButtonBackgroundColor(sender: sender)
+        
     }
     
     @IBAction func sortDateUp(_ sender: UIButton) {
+        
+        allRecords = Utils.sortByDateUp(records: allRecords)
+        tableView.reloadData()
+        changeButtonBackgroundColor(sender: sender)
     }
     
+    
+    func changeButtonBackgroundColor(sender: UIButton){
+        for button in sortingButtons{
+            if (button == sender){
+                button.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            } else {
+                button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            }
+        }
+    }
     
     
 }
@@ -110,18 +155,25 @@ extension RecordsViewController: UITableViewDataSource {
         cell.recordTitle.text = allRecords[indexPath.row].title
         cell.recordArtist.text = allRecords[indexPath.row].artist
         cell.recordImage.sd_setImage(with: URL(string: allRecords[indexPath.row].image!), placeholderImage: UIImage(named: "record1"))
-
+        
         let recordPrice = Utils.splitPrice(price: allRecords[indexPath.row].price!)
         cell.recordMainPrice.text = String(recordPrice[0])
         cell.recordSubPrice.text = String(recordPrice[1])
         
-
+        
         
         
         return cell
     }
     
     func didSelectRecord(_ id: Int) {
+        
+        for record in allRecords {
+            if record.id == id {
+                record.isFavorite = true
+                break
+            }
+        }
         
         for index in 0..<favoriteArray.count {
             if id == favoriteArray[index] {
@@ -135,7 +187,7 @@ extension RecordsViewController: UITableViewDataSource {
         print(favoriteArray)
     }
     
-
+    
 }
 
 extension RecordsViewController: UITableViewDelegate {
