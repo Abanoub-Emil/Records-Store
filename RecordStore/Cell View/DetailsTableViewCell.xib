@@ -45,7 +45,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questa Noche" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ra-1n-dJI">
-                                <rect key="frame" x="52.000000000000007" y="449.66666666666669" width="92.666666666666686" height="17"/>
+                                <rect key="frame" x="52" y="449.66666666666669" width="90" height="17"/>
                                 <fontDescription key="fontDescription" name="FuturaBT-Medium" family="Futura" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -156,19 +156,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gdV-CJ-rNf">
-                                <rect key="frame" x="220" y="1053.6666666666667" width="72" height="47"/>
+                                <rect key="frame" x="329" y="1053.6666666666667" width="72" height="47"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dcv-qd-tVv">
-                                <rect key="frame" x="296" y="1058.6666666666667" width="33" height="31.666666666666742"/>
+                                <rect key="frame" x="405" y="1058.6666666666667" width="33" height="31.666666666666742"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSn-U9-zij">
-                                <rect key="frame" x="52" y="1126.6666666666667" width="277" height="28"/>
+                                <rect key="frame" x="52" y="1126.6666666666667" width="386" height="28"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="12"/>
                                 <state key="normal" title="ADD TO BUCKET">
@@ -211,7 +211,7 @@
                             <constraint firstItem="SsF-Pj-Igw" firstAttribute="top" secondItem="jHm-bb-QKo" secondAttribute="top" id="FSS-RM-kwJ"/>
                             <constraint firstItem="lSn-U9-zij" firstAttribute="trailing" secondItem="dcv-qd-tVv" secondAttribute="trailing" id="FuK-RD-kAD"/>
                             <constraint firstItem="SsF-Pj-Igw" firstAttribute="trailing" secondItem="jHm-bb-QKo" secondAttribute="trailing" id="IlV-KJ-Ew1"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lSn-U9-zij" secondAttribute="trailing" constant="32" id="Ilc-ZH-NFY"/>
+                            <constraint firstAttribute="trailing" secondItem="lSn-U9-zij" secondAttribute="trailing" constant="32" id="Ilc-ZH-NFY"/>
                             <constraint firstItem="nvf-E2-CgB" firstAttribute="top" secondItem="ZZT-dk-37v" secondAttribute="bottom" constant="32" id="KQI-2y-ah1"/>
                             <constraint firstItem="nvf-E2-CgB" firstAttribute="leading" secondItem="ZZT-dk-37v" secondAttribute="leading" id="KXA-rH-zlb"/>
                             <constraint firstItem="dcv-qd-tVv" firstAttribute="leading" secondItem="gdV-CJ-rNf" secondAttribute="trailing" constant="4" id="KjP-hW-6Kq"/>
@@ -224,7 +224,7 @@
                             <constraint firstItem="daq-f2-90c" firstAttribute="top" secondItem="nvf-E2-CgB" secondAttribute="bottom" constant="8" id="RhT-t0-loW"/>
                             <constraint firstItem="wHC-qH-4az" firstAttribute="top" secondItem="n3o-T3-Vrg" secondAttribute="bottom" constant="8" id="Ses-OB-vQM"/>
                             <constraint firstItem="y0k-Ra-5Xa" firstAttribute="bottom" secondItem="jHm-bb-QKo" secondAttribute="bottom" id="Sku-Fb-D9D"/>
-                            <constraint firstItem="gdV-CJ-rNf" firstAttribute="leading" secondItem="jHm-bb-QKo" secondAttribute="trailing" priority="999" constant="74" id="TnF-xI-mEw"/>
+                            <constraint firstItem="gdV-CJ-rNf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jHm-bb-QKo" secondAttribute="trailing" priority="999" constant="32" id="TnF-xI-mEw"/>
                             <constraint firstItem="fdJ-58-xMP" firstAttribute="leading" secondItem="For-q8-xht" secondAttribute="leading" id="Txt-FL-rH7"/>
                             <constraint firstItem="30n-Rb-zAx" firstAttribute="centerY" secondItem="n3o-T3-Vrg" secondAttribute="centerY" id="Ur6-xp-iFk"/>
                             <constraint firstItem="y0k-Ra-5Xa" firstAttribute="width" secondItem="jHm-bb-QKo" secondAttribute="width" multiplier="1:2" id="W5i-RI-0mH"/>
@@ -239,7 +239,7 @@
                             <constraint firstItem="ugK-UK-3xB" firstAttribute="leading" secondItem="28S-4O-r2S" secondAttribute="leading" id="arr-DV-Np3"/>
                             <constraint firstItem="SsF-Pj-Igw" firstAttribute="bottom" secondItem="jHm-bb-QKo" secondAttribute="bottom" id="bO1-4F-UKi"/>
                             <constraint firstItem="ugK-UK-3xB" firstAttribute="top" secondItem="28S-4O-r2S" secondAttribute="top" id="cSP-Ht-7Ew"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dcv-qd-tVv" secondAttribute="trailing" constant="32" id="dw2-OL-rBE"/>
+                            <constraint firstAttribute="trailing" secondItem="dcv-qd-tVv" secondAttribute="trailing" constant="32" id="dw2-OL-rBE"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="daq-f2-90c" secondAttribute="trailing" constant="32" id="f1f-QN-FuV"/>
                             <constraint firstItem="7qL-d6-mS7" firstAttribute="top" secondItem="3Hl-iK-jMf" secondAttribute="top" constant="5" id="fyy-fF-G03"/>
                             <constraint firstItem="3Hl-iK-jMf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="28S-4O-r2S" secondAttribute="trailing" priority="998" constant="32" id="gUp-WD-9ZB"/>
