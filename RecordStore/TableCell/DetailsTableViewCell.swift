@@ -11,6 +11,7 @@ import UIKit
 class DetailsTableViewCell: UITableViewCell {
     
     var recordDetails = Record()
+    let defaults = UserDefaults.standard
     weak var detailsCellDelegate: DetailsCellDelegate?
     var requestedQuantity = 1
     
@@ -38,16 +39,21 @@ class DetailsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var recordDescription: UILabel!
     
+    @IBOutlet weak var favoriteButton: UIButton!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        // Configure the view for the selected state
+       
     }
+    
     
     
     @IBAction func addToBucket(_ sender: UIButton) {
@@ -81,6 +87,29 @@ class DetailsTableViewCell: UITableViewCell {
         subPrice2.text = String(recordPrice[1])
         
     }
+    
+    @IBAction func addToFavorite(_ sender: UIButton) {
+        var favoriteArray = defaults.array(forKey: "favoriteRecords")  as? [Int] ?? [Int]()
+        if recordDetails.isFavorite {
+            recordDetails.isFavorite = false
+            favoriteButton.setImage(UIImage(named: "White"), for: .normal)
+            for index in 0..<favoriteArray.count {
+                if recordDetails.id == favoriteArray[index] {
+                    favoriteArray.remove(at: index)
+                    break
+                }
+            }
+            defaults.set(favoriteArray, forKey: "favoriteRecords")
+            
+        } else {
+            recordDetails.isFavorite = true
+            favoriteButton.setImage(UIImage(named: "red"), for: .normal)
+            favoriteArray.append(recordDetails.id!)
+            defaults.set(favoriteArray, forKey: "favoriteRecords")
+            
+        }
+    }
+    
 }
 
 protocol DetailsCellDelegate : class {

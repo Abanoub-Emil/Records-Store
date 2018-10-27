@@ -18,8 +18,7 @@ class RecordsViewController: UIViewController, RecordCellDelegate {
     let recordsURL = "https://recordstor.herokuapp.com/api/recordstore/all"
     
     @IBOutlet var sortingButtons: [UIButton]!
-    
-    
+        
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var numberOfRecordsInBucket: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -74,6 +73,7 @@ class RecordsViewController: UIViewController, RecordCellDelegate {
         }
         let bucketRecords = defaults.integer(forKey: "bucket")
         numberOfRecordsInBucket.setTitle(String(bucketRecords), for: .normal)
+        tableView.reloadData()
     }
     
     @IBAction func goToFavorites(_ sender: UIButton) {
@@ -155,7 +155,11 @@ extension RecordsViewController: UITableViewDataSource {
         cell.recordTitle.text = allRecords[indexPath.row].title
         cell.recordArtist.text = allRecords[indexPath.row].artist
         cell.recordImage.sd_setImage(with: URL(string: allRecords[indexPath.row].image!), placeholderImage: UIImage(named: "record1"))
-        
+        if allRecords[indexPath.row].isFavorite {
+            cell.favoriteButton.setImage(UIImage(named: "red"), for: .normal)
+        } else {
+            cell.favoriteButton.setImage(UIImage(named: "White"), for: .normal)
+        }
         let recordPrice = Utils.splitPrice(price: allRecords[indexPath.row].price!)
         cell.recordMainPrice.text = String(recordPrice[0])
         cell.recordSubPrice.text = String(recordPrice[1])

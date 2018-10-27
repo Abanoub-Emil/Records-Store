@@ -41,9 +41,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9j-tu-GtP">
                                         <rect key="frame" x="272" y="52" width="18" height="22"/>
                                         <state key="normal" image="Black"/>
-                                        <connections>
-                                            <action selector="addOrRemoveFromFavorite:" destination="9JR-z6-CV6" eventType="touchUpInside" id="k2x-Nr-knb"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="eVc-UD-7UZ">
                                         <rect key="frame" x="349" y="46" width="18" height="18"/>

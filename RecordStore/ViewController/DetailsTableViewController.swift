@@ -42,26 +42,7 @@ class DetailsTableViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func addOrRemoveFromFavorite(_ sender: UIButton) {
-        if myRecord.isFavorite {
-            myRecord.isFavorite = false
-            isFavoriteButton.setImage(UIImage(named: "Black"), for: .normal)
-            for index in 0..<favoriteArray.count {
-                if myRecord.id == favoriteArray[index] {
-                    favoriteArray.remove(at: index)
-                    break
-                }
-            }
-            defaults.set(favoriteArray, forKey: "favoriteRecords")
-            
-        } else {
-            myRecord.isFavorite = true
-            isFavoriteButton.setImage(UIImage(named: "red"), for: .normal)
-            favoriteArray.append(myRecord.id!)
-            defaults.set(favoriteArray, forKey: "favoriteRecords")
-            
-        }
-    }
+   
     
 }
 
@@ -96,6 +77,9 @@ extension DetailsTableViewController: UITableViewDataSource{
         cell.detailsCellDelegate = self
         cell.recordDetails = myRecord
         
+        if (myRecord.isFavorite){
+            cell.favoriteButton.setImage(UIImage(named: "red"), for: .normal)
+        }
         cell.title.text = myRecord.title
         cell.artist.text = myRecord.artist
         cell.label.text = myRecord.label
